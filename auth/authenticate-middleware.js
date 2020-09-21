@@ -3,7 +3,7 @@ const secrets = require("../config/secrets.js");
 
 module.exports = (req, res, next) => {
   // add code here to verify users are logged in
-  const [authType, token] = req.headers.authorization.split(" "); //TODO add the header to the request call using Bearer followed by a space and the token
+  const [authType, token] = req.headers.authorization; //TODO add the header to the request call using Bearer followed by a space and the token
   console.log("Token: ", token);
 
   if (token) {
