@@ -45,13 +45,13 @@ API URL is:
     ```
 2. Once a new user registered the API will return JSON data with the following shape:
    ```json
-   {
+        {
         "data": {
             "id": 3,
             "username": "Christopher",
             "password": "$2a$08$xQn32X30yBUqvdZKF3k3S.EZCSRy9MVN1hkhBQvxO3xbDCjMmJgMC"
+            }
         }
-    }
     ```
 ---
 ## Login
