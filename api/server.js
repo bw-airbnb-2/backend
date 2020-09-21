@@ -15,7 +15,6 @@ server.use(express.json());
 
 
 server.use('/api/auth', authRouter);
-server.use('/api/jokes', authenticate, jokesRouter);
 server.use('/api/users',authenticate, userRouter);
 
 // server.get("/", (_, res) => {
