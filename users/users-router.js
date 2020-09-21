@@ -11,4 +11,6 @@ router.get("/", restricted, (req, res) => {
     .catch(err => res.send(err));
 });
 
+// TODO Add endpoints address, first name, last name, age, birthday, etc to the user router
+
 module.exports = router;
