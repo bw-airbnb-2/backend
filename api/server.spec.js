@@ -62,25 +62,6 @@ it("POST api/auth/login - should return status 401", function () {
         })
 })
 
-it("GET api/jokes/ - res.type should match json", function () {
-    return supertest(server)
-        .get("/api/jokes/")
-        .set("Authorization", `Bearer ${token}`)
-        .then(res => {
-
-            expect(res.type).toMatch(/json/i);
-        })
-})
-
-it("GET api/jokes/ - should be defined", function () {
-    return supertest(server)
-        .get("/api/jokes/")
-        .then(res => {
-
-            expect(res.body).toBeDefined();
-        })
-})
-
 it("should respond with JSON", () => {
     return supertest(server)
     .get("/api/users")
