@@ -27,7 +27,26 @@ API URL is:
  | _api/auth/login_ | _api/auth/register_ | _api/users_ |
 ---
 
-
+## Register
+---
+1. To register a user you will need to send data to _api/auth/register_ endpoint:
+   * The shape of the user data should have the following shape:
+    ```json
+        {
+            "username": "Christopher",
+            "password": "123456"
+        }
+    ```
+2. Once a new user registered the API will return JSON data with the following shape:
+   ```json
+   {
+        "data": {
+            "id": 3,
+            "username": "Christopher",
+            "password": "$2a$08$xQn32X30yBUqvdZKF3k3S.EZCSRy9MVN1hkhBQvxO3xbDCjMmJgMC"
+        }
+    }
+    ```
 ## Login
 ---
 To log in use the following steps in order:
@@ -37,12 +56,12 @@ __NOTE:__ You can NOT login a user without registering a user first. This is onl
 1. To Login you will need to send a request to the API with the login data.
    * The data should be _JSON_ data with the following shape:
 
-    ```
+    ```json
             "username" : "MyUsername",
             "Pasword": "MyPassword"
     ```
     * Once you successfully login you should recieve a JSON response with the following data: 
-        ``` 
+        ```json 
         {
         "message": "Welcome to our API",
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6IkNocmlzdG9waGVyIiwiaWF0IjoxNjAwNzIwNzMwLCJleHAiOjE2MDA3MjQzMzB9.__SevXXb6OXZO_TXfhLe88_cgppEGhgG_Ag5Vw28qsw" 
@@ -58,7 +77,7 @@ __NOTE:__ You can NOT login a user without registering a user first. This is onl
 
     * The shape of the user data that is returned from _/api/users_ is:
     
-    ```
+    ```json
     [
         {
             "id": 1,
