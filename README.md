@@ -47,6 +47,7 @@ API URL is:
         }
     }
     ```
+---
 ## Login
 ---
 To log in use the following steps in order:
