@@ -33,8 +33,14 @@ API URL is:
    * The shape of the user data should have the following shape:
     ```json
         {
-            "username": "Christopher",
-            "password": "123456"
+          username: "Chris",
+          password: "12345",
+          first_name: "Christopher",
+          last_name: "Harwell",
+          address: "1234 Main St, Somewhere, OH, 12345",
+          age: 26,
+          birthday: "10 - 14 - 1994",
+          country: "USA"
         }
     ```
 2. Once a new user registered the API will return JSON data with the following shape:
@@ -81,12 +87,22 @@ __NOTE:__ You can NOT login a user without registering a user first. This is onl
     ```json
     [
         {
-            "id": 1,
-            "username": "Chris"
+            "username": "Chris",
+            "first_name": "Christopher",
+            "last_name": "Harwell",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
         },
         {
-            "id": 3,
-            "username": "Christopher"
+            "username": "rjarrell",
+            "first_name": "Roger",
+            "last_name": "Jarrell",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
         }
     ]
     ```
