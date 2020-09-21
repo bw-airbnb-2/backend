@@ -1,4 +1,4 @@
-const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/airbnb";
+const pgConnection = process.env.DATABASE_URL || "postgres://gzsquhxpxatoff:84a8527cc51c2d3ece01d1238d84ef27c26dbe69516d4b9726d308b599a8e793@ec2-3-224-97-209.compute-1.amazonaws.com:5432/daolhiiqiolu30";
 
 module.exports = {
   development: {
