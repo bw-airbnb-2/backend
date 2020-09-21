@@ -9,7 +9,17 @@ module.exports = {
 // TODO Add address, first name, last name, age, birthday, etc to the user model
 
 function find() {
-  return db("users").select("id", "username").orderBy("id");
+  return db("users")
+    .select(
+      "username",
+      "first_name",
+      "last_name",
+      "address",
+      "age",
+      "birthday",
+      "country"
+    )
+    .orderBy("id");
 }
 
 function findBy(filter) {

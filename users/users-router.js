@@ -11,6 +11,15 @@ router.get("/", restricted, (req, res) => {
     .catch(err => res.send(err));
 });
 
+router.get("/:id", restricted, (req, res) => {
+  const {id} = req.params;
+  Users.findById(id)
+    .then(user => {
+      res.status(200).json(user);
+    })
+    .catch(err => res.send(err));
+});
+
 // TODO Add endpoints address, first name, last name, age, birthday, etc to the user router
 
 module.exports = router;
