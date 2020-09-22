@@ -14,7 +14,23 @@ exports.up = function (knex) {
   
       })
       .createTable("listings", (tbl) => {
- 
+        tbl.increments();
+        tbl
+          .integer("userId")
+          .unsigned()
+          .notNullable()
+          .references("id")
+          .inTable("users")
+          .onUpdate("CASCADE")
+          .onDelete("CASCADE");
+        tbl
+          .integer("name")
+          .unsigned()
+          .notNullable()
+          .references("username")
+          .inTable("users")
+          .onUpdate("CASCADE")
+          .onDelete("CASCADE");
         tbl.string("room_type", 255).notNullable();
         tbl.integer("min_num_nights").notNullable();
         tbl.string("location", 100).notNullable();
