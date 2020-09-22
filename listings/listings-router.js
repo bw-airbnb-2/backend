@@ -19,4 +19,20 @@ router.get("/:id", restricted, (req, res) => {
     })
     .catch(err => res.send(err));
 });
+
+router.post("/listings", (req, res) => {
+  const listingInfo = req.body;
+  try {
+  Listings.add(listingInfo).then(listings => {
+    res.status(201).json({data: listings})
+    .catch(error => {
+      res.status(500).json({message: error.message});
+    });
+  })
+} catch(err) {
+  return res.status(400).json({
+    message: "please provide missing information"
+  })
+}
+})
 module.exports = router;
