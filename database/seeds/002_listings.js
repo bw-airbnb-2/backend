@@ -9,9 +9,15 @@ exports.seed = function (knex) {
           userId: 1,
           name: "Chris",
           room_type: "large",
-          min_num_nights: 3,
           location: "Japan",
           price: 255.99,
+          accomodates: 3,
+          bathrooms: 2,
+          bedrooms: 2,
+          beds: 3,
+          guests_included: 2,
+          minimum_nights: 3,
+          maximum_nights: 6
         },
       ]);
     });
