@@ -9,7 +9,7 @@ exports.up = function (knex) {
         users.string("last_name", 50).notNullable();
         users.string("address", 250).notNullable();
         users.integer("age", 100).notNullable();
-        users.date("birthday").notNullable();
+        users.string("birthday").notNullable();
         users.string("country", 40).notNullable();
   
       })
