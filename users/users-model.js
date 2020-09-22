@@ -6,7 +6,7 @@ module.exports = {
   findBy,
   findById,
 };
-// TODO Add address, first name, last name, age, birthday, etc to the user model
+//TODO Add address, first name, last name, age, birthday, etc to the user model
 
 function find() {
   return db("users")
