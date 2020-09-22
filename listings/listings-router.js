@@ -20,7 +20,7 @@ router.get("/:id", restricted, (req, res) => {
     .catch(err => res.send(err));
 });
 
-router.post("/listings", (req, res) => {
+router.post("/", (req, res) => {
   const listingInfo = req.body;
   try {
   Listings.add(listingInfo).then(listings => {
