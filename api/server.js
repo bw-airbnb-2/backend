@@ -17,7 +17,8 @@ server.use(express.json());
 
 server.use('/api/auth', authRouter);
 server.use('/api/users', authenticate, userRouter);
-server.use('/api/listings', authenticate, listingsRouter);
+server.use('/api', authenticate, listingsRouter);
+
 server.get("/", (_, res) => {
     res.status(200).json({ api: "up" });
   });
