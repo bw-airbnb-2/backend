@@ -24,7 +24,7 @@ exports.up = function (knex) {
           .onUpdate("CASCADE")
           .onDelete("CASCADE");
         tbl
-          .integer("name")
+          .string("name", 255)
           .unsigned()
           .notNullable()
           .references("username")
