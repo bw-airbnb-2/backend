@@ -22,9 +22,9 @@ API URL is:
  ---
 
 
- | Login    |   Register    | Users |
- |----------------|:------------------:|-----:|
- | _api/auth/login_ | _api/auth/register_ | _api/users_ |
+ | Login    |   Register    | Users | Listings |
+ |----------------|:------------------:|:---------------:|-------------------:|
+ | _api/auth/login_ | _api/auth/register_ | _api/users_ | _api/listings_ |
 ---
 
 ## Register
@@ -106,4 +106,11 @@ __NOTE:__ You can NOT login a user without registering a user first. This is onl
         }
     ]
     ```
+-----
+## Listings
+---
+
+Once a new user is registered or a existing user logs in, they will have the ability to view listings
+
+
 
