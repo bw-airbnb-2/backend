@@ -5,12 +5,15 @@ module.exports = {
   find,
   findBy,
   findById,
+  update,
+  remove
 };
 //TODO Add address, first name, last name, age, birthday, etc to the user model
 
 function find() {
   return db("listings")
     .select(
+      "id",
       "userId",
       "name",
       "room_type",
@@ -33,14 +36,31 @@ function findBy(filter) {
 
 async function add(listing) {
   try {
-    const [userId] = await db("listings").insert(listing, "userId");
+    const [id] = await db("listings").insert(listing, "id");
 
-    return findById(userId);
+    return findById(id);
   } catch (error) {
     throw error;
   }
 }
 
-function findById(userId) {
-  return db("listings").where({ userId }).first();
+function findById(id) {
+  return db("listings").where({id}).select();
 }
+
+function update(changes, id) {
+  return db("listings")
+    .where({ id })
+    .update(changes)
+    .then((count) => {
+      return findById(id);
+    });
+}
+
+async function remove(id) {
+  const deleted = await findById(id);
+  const changes = await db("listings")
+      .where({id})
+      .del();
+  return changes ? deleted : undefined;
+};
