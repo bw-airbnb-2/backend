@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 const secrets = require("../config/secrets.js");
 
 const Users = require("../users/users-model.js");
-const Listings = require("../listings/listings-model.js");
 
 const { isValid } = require("../users/users-service.js");
 
@@ -60,21 +59,7 @@ router.post("/login", (req, res) => {
   }
 });
 
-router.post("/listings", (req, res) => {
-  const listingInfo = req.body;
-  try {
-  Listings.add(listingInfo).then(listings => {
-    res.status(201).json({data: listings})
-    .catch(error => {
-      res.status(500).json({message: error.message});
-    });
-  })
-} catch(err) {
-  return res.status(400).json({
-    message: "please provide missing information"
-  })
-}
-})
+
 
 function generateToken(user) {
   // the payload is arbitrary to the data needed
