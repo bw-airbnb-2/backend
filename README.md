@@ -115,12 +115,98 @@ Once a new user is registered or a existing user logs in, they will have the abi
  ## GET /
  ----
  returns listings
+ - the data returned will look like:
+```json
+[
+    {
+        "id": 2,
+        "userId": 1,
+        "name": "Chris",
+        "room_type": "large",
+        "minimum_nights": 3,
+        "maximum_nights": 6,
+        "location": "Japan",
+        "price": 255.99,
+        "accomodates": 3,
+        "bathrooms": 2,
+        "bedrooms": 2,
+        "beds": 3,
+        "guests_included": 2
+    },
+    {
+        "id": 4,
+        "userId": 1,
+        "name": "Chris",
+        "room_type": "large",
+        "minimum_nights": 3,
+        "maximum_nights": 6,
+        "location": "Japan",
+        "price": 255.99,
+        "accomodates": 3,
+        "bathrooms": 2,
+        "bedrooms": 2,
+        "beds": 3,
+        "guests_included": 2
+    },
+    {
+        "id": 5,
+        "userId": 1,
+        "name": "Chris",
+        "room_type": "large",
+        "minimum_nights": 3,
+        "maximum_nights": 6,
+        "location": "Japan",
+        "price": 255.99,
+        "accomodates": 3,
+        "bathrooms": 2,
+        "bedrooms": 2,
+        "beds": 3,
+        "guests_included": 2
+    },
+    {
+        "id": 6,
+        "userId": 1,
+        "name": "Chris",
+        "room_type": "large",
+        "minimum_nights": 3,
+        "maximum_nights": 6,
+        "location": "Japan",
+        "price": 255.99,
+        "accomodates": 3,
+        "bathrooms": 2,
+        "bedrooms": 2,
+        "beds": 3,
+        "guests_included": 2
+    }
+]
+```
 
  ## GET /:id
  ----
  returns a listing with the given id
+ - the data returned will look like:
+  ```json
+  [
+    {
+        "id": 4,
+        "userId": 1,
+        "name": "Chris",
+        "room_type": "large",
+        "minimum_nights": 3,
+        "maximum_nights": 6,
+        "location": "Japan",
+        "price": 255.99,
+        "accomodates": 3,
+        "bathrooms": 2,
+        "bedrooms": 2,
+        "beds": 3,
+        "guests_included": 2
+    }
+]
+  ```
 
- ## POST / 
+ ## POST /
+ --- 
  Adds a new listing
  - the Data returned will look like:
  ```json 
