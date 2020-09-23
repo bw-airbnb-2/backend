@@ -1,5 +1,9 @@
 # backend
 
+## A Link to more detailed documentation:
+[More Detailed Docs](https://documenter.getpostman.com/view/11063756/TVKEVbTT)
+
+
  GET /
  ---------
  ---
@@ -275,5 +279,120 @@ Removes an existing listing
     ]
 }
 ```
+---
+## USERS
+---
+## GET
+- The data returned looks like this:
+    ```json  
+    [
+        {
+            "username": "Chris",
+            "first_name": "Christopher",
+            "last_name": "Harwell",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "ChrisHarwell",
+            "first_name": "Christopher",
+            "last_name": "Harwell",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "Austin McCollom",
+            "first_name": "firstPlaceholder",
+            "last_name": "lastPlaceholder",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "Austin2",
+            "first_name": "firstPlaceholder",
+            "last_name": "lastPlaceholder",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "Austin3",
+            "first_name": "firstPlaceholder",
+            "last_name": "lastPlaceholder",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "ChrisHarwell1995",
+            "first_name": "Christopher",
+            "last_name": "Harwell",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "James",
+            "first_name": "firstPlaceholder",
+            "last_name": "lastPlaceholder",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "Hannah",
+            "first_name": "firstPlaceholder",
+            "last_name": "lastPlaceholder",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "Jakie",
+            "first_name": "firstPlaceholder",
+            "last_name": "lastPlaceholder",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        },
+        {
+            "username": "ddddd",
+            "first_name": "firstPlaceholder",
+            "last_name": "lastPlaceholder",
+            "address": "1234 Main St, Somewhere, OH, 12345",
+            "age": 26,
+            "birthday": "10 - 14 - 1994",
+            "country": "USA"
+        }
+    ]
+    ```
+
+## GET /:id
+- The data returned will look like this:
+  ```json
+    {
+        "id": 1,
+        "username": "Chris",
+        "password": "12345",
+        "first_name": "Christopher",
+        "last_name": "Harwell",
+        "address": "1234 Main St, Somewhere, OH, 12345",
+        "age": 26,
+        "birthday": "10 - 14 - 1994",
+        "country": "USA"
+    }
+  ```
 
 
