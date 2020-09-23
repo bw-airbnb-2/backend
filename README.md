@@ -112,5 +112,82 @@ __NOTE:__ You can NOT login a user without registering a user first. This is onl
 
 Once a new user is registered or a existing user logs in, they will have the ability to view listings
 
+ ## GET /
+ ----
+ returns listings
+
+ ## GET /:id
+ ----
+ returns a listing with the given id
+
+ ## POST / 
+ Adds a new listing
+ - the Data returned will look like:
+ ```json 
+ {
+  "userId":1,
+  "name":"Chris",
+  "room_type":"large",
+  "location":"Japan",
+  "price":255.99,
+  "accomodates":3,
+  "bathrooms":2,
+  "bedrooms":2,
+  "beds":3,
+  "guests_included":2,
+  "minimum_nights":3,
+  "maximum_nights":6
+}
+```
+## PUT /:id
+---
+
+Updates an existing listing:
+- The data returned looks like:
+```json 
+    [
+        {
+            "id": 1,
+            "userId": 1,
+            "name": "Chris",
+            "room_type": "xlarge",
+            "minimum_nights": 3,
+            "maximum_nights": 6,
+            "location": "Japan",
+            "price": 255.99,
+            "accomodates": 3,
+            "bathrooms": 2,
+            "bedrooms": 2,
+            "beds": 3,
+            "guests_included": 2
+        }
+    ]
+```
+
+## DELETE /:id
+---
+Removes an existing listing
+- Once an item is deleted the following response will be returned:
+```json 
+  {
+    "removed": [
+        {
+            "id": 1,
+            "userId": 1,
+            "name": "Chris",
+            "room_type": "xlarge",
+            "minimum_nights": 3,
+            "maximum_nights": 6,
+            "location": "Japan",
+            "price": 255.99,
+            "accomodates": 3,
+            "bathrooms": 2,
+            "bedrooms": 2,
+            "beds": 3,
+            "guests_included": 2
+        }
+    ]
+}
+```
 
 
