@@ -7,6 +7,18 @@ let token =
 
 beforeAll((done) => {
   supertest(server)
+    .post("/api/auth/register")
+    .send({
+      username: "Chris12",
+      password: "123456",
+      first_name: "Christopher",
+      last_name: "Harwell",
+      address: "1234 Main St, Somewhere, OH, 12345",
+      age: 26,
+      birthday: "10 - 14 - 1994",
+      country: "USA",
+    })
+    supertest(server)
     .post("/api/auth/login")
     .send({
       username: "Chris12",
@@ -21,6 +33,7 @@ beforeAll((done) => {
 describe("server.js", () => {
   beforeEach(async () => {
     await db("users").truncate();
+    await db("listings").truncate();
   });
 
   it("POST api/auth/register - should return status 201", function () {
@@ -76,6 +89,7 @@ describe("server.js", () => {
         expect(res.status).toBe(401);
       });
   });
+
 
   it("should respond with JSON", () => {
     return supertest(server)
