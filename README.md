@@ -91,6 +91,7 @@ __NOTE:__ You can NOT login a user without registering a user first. This is onl
     ```json
     [
         {
+            "id": 1,
             "username": "Chris",
             "first_name": "Christopher",
             "last_name": "Harwell",
